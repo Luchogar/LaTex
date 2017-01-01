@@ -1,0 +1,147 @@
+\documentclass[oneside,numbers,spanish]{ezthesis}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage[rflt]{floatflt}
+%% # Opciones disponibles para el documento #
+%%
+%% Las opciones con un (*) son las opciones predeterminadas.
+%%
+%% Modo de compilar:
+%%   draft            - borrador con marcas de fecha y sin im'agenes
+%%   draftmarks       - borrador con marcas de fecha y con im'agenes
+%%   final (*)        - version final de la tesis
+%%
+%% Tama'no de papel:
+%%   letterpaper (*)  - tama'no carta (Am'erica)
+%%   a4paper          - tama'no A4    (Europa)
+%%
+%% Formato de impresi'on:
+%%   oneside          - hojas impresas por un solo lado
+%%   twoside (*)      - hijas impresas por ambos lados
+%%
+%% Tama'no de letra:
+%%   10pt, 11pt, o 12pt (*)
+%%
+%% Espaciado entre renglones:
+%%   singlespace      - espacio sencillo
+%%   onehalfspace (*) - espacio de 1.5
+%%   doublespace      - a doble espacio
+%%
+%% Formato de las referencias bibliogr'aficas:
+%%   numbers          - numeradas, p.e. [1]
+%%   authoryear (*)   - por autor y a'no, p.e. (Newton, 1997)
+%%
+%% Opciones adicionales:
+%%   spanish         - tesis escrita en espa'nol
+%%
+%% Desactivar opciones especiales:
+%%   nobibtoc   - no incluir la bibiolgraf'ia en el 'Indice general
+%%   nofancyhdr - no incluir "fancyhdr" para producir los encabezados
+%%   nocolors   - no incluir "xcolor" para producir ligas con colores
+%%   nographicx - no incluir "graphicx" para insertar gr'aficos
+%%   nonatbib   - no incluir "natbib" para administrar la bibliograf'ia
+
+%% Paquetes adicionales requeridos se pueden agregar tambi'en aqu'i.
+%% Por ejemplo:
+%\usepackage{subfig}
+%\usepackage{multirow}
+
+%% # Datos del documento #
+%% Nota que los acentos se deben escribir: \'a, \'e, \'i, etc.
+%% La letra n con tilde es: \~n.
+
+\author{\textbf{Luis Ignacio García Reyes}}
+\title{\large{Diseño e implementación de un electrocardiograma con aplicación en sistema Android.}}
+\degree{\textit{Calidad en las telecomunicaciones}}
+%\supervisor{Nombre de mi Asesor}
+\institution{\huge{Universidad Autónoma De La Ciudad de México}}
+\faculty{}
+\department{Ingeniería en sistemas electrónicos y de telecomunicaciones}
+
+%% # M'argenes del documento #
+%% 
+%% Quitar el comentario en la siguiente linea para austar los m'argenes del
+%% documento. Leer la documentaci'on de "geometry" para m'as informaci'on.
+
+%\geometry{top=40mm,bottom=33mm,inner=40mm,outer=25mm}
+
+%% El siguiente comando agrega ligas activas en el documento para las
+%% referencias cruzadas y citas bibliogr'aficas. Tiene que ser *la 'ultima*
+%% instrucci'on antes de \begin{document}.
+\hyperlinking
+\begin{document}
+
+%% En esta secci'on se describe la estructura del documento de la tesis.
+%% Consulta los reglamentos de tu universidad para determinar el orden
+%% y la cantidad de secciones que debes de incluir.
+
+%% # Portada de la tesis #
+%% Mirar el archivo "titlepage.tex" para los detalles.
+
+\include{titlepage}
+
+%% # Prefacios #
+%% Por cada prefacio (p.e. agradecimientos, resumen, etc.) crear
+%% un nuevo archivo e incluirlo aqu'i.
+%% Para m'as detalles y un ejemplo mirar el archivo "gracias.tex".
+%\include{gracias}
+
+%% # 'Indices y listas de contenido #
+%% Quitar los comentarios en las lineas siguientes para obtener listas de
+%% figuras y cuadros/tablas.
+
+
+\tableofcontents
+
+\listoffigures
+ % para que aparezca en el indice de contenidos
+ % indice de figuras
+%\listoffigures
+%\listoftables
+\include{justific}
+%\include{objetivos}
+%% # Cap'itulos #
+%% Por cada cap'itulo hay que crear un nuevo archivo e incluirlo aqu'i.
+%% Mirar el archivo "intro.tex" para un ejemplo y recomendaciones para
+%% escribir.
+%\include{justific}
+\include{objetivos}
+%%Aqui agregare lo que sera el marco teorico
+%%Ademas de algunas modificaciones que se vallan presentando
+\include{intro}
+
+
+
+\include{marco}
+%\include{capitulo1}
+%\include{capitulo2}
+%\include{capitulo3}
+%\include{conclu}
+\include{desa}
+%\include{capitulo1}
+%\include{capitulo2}
+%\include{capitulo3}
+%\include{conclu}
+\include{implement}
+%\include{capitulo1}
+%\include{capitulo2}
+%\include{capitulo3}
+\include{conclusion}
+%\include{capitulo1}
+%\include{capitulo2}
+%\include{capitulo3}
+\appendix
+%% Cap'itulos incluidos despues del comando \appendix aparecen como ap'endices
+%% de la tesis.
+%\include{apendiceA}
+%\include{apendiceB}
+%\include{apendiceC}
+
+%% Incluir la bibliograf'ia. Mirar el archivo "biblio.bib" para m'as detales
+%% y un ejemplo.
+\nocite{*}
+\bibliographystyle{apalike}
+\bibliography{ref}
+
+\end{document}
